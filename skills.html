@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Skills of Hemasri Arul - Full Stack Developer & AI Enthusiast">
+  <meta name="author" content="Hemasri Arul">
+  <meta name="theme-color" content="#00F5FF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <title>Skills | Hemasri Arul</title>
+</head>
+<body>
+  <div class="cursor-outer" id="cursorOuter"></div>
+  <div class="cursor-inner" id="cursorInner"></div>
+  <canvas id="cursorTrail" class="cursor-trail"></canvas>
+
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Scroll progress">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <header class="header" id="header" role="banner">
+    <nav class="nav container" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Home">HA</a>
+      <div class="nav-links" id="navLinks">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link active">Skills</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="certificates.html" class="nav-link">Certificates</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section id="skills" class="skills section" aria-label="Skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">My Skills</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Expertise</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card glass-card reveal" data-tilt>
+          <div class="skill-icon"><i class="fas fa-code"></i></div>
+          <h3 class="skill-title">Frontend</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span>HTML</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>CSS</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>JavaScript</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card glass-card reveal" data-tilt>
+          <div class="skill-icon"><i class="fas fa-server"></i></div>
+          <h3 class="skill-title">Backend</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span>Node.js</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>Express.js</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card glass-card reveal" data-tilt>
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <h3 class="skill-title">Database</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span>MongoDB</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>MySQL</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card glass-card reveal" data-tilt>
+          <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+          <h3 class="skill-title">Programming</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span>Python</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>Java</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>C</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card glass-card reveal" data-tilt>
+          <div class="skill-icon"><i class="fas fa-tools"></i></div>
+          <h3 class="skill-title">Tools</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span>Git</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>GitHub</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>VS Code</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card glass-card reveal" data-tilt>
+          <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+          <h3 class="skill-title">Data & AI</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span>Data Analysis</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>AI/ML</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C300,100 700,0 1200,60 L1200,120 L0,120 Z" class="wave-path"></path>
+      </svg>
+    </div>
+    <div class="container footer-content">
+      <div class="footer-socials">
+        <a href="https://github.com/arulhemasri21-code" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hemasri-a-61a139381" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:arulhemasri21@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-copy">
+        &copy; <span id="footerYear">2024</span> Hemasri Arul. Crafted with <i class="fas fa-heart" style="color: #ff6b6b;"></i>
+      </p>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-rocket"></i>
+    </button>
+  </footer>
+
+  <script src="js/particles.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

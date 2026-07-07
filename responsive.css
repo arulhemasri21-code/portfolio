@@ -1,0 +1,216 @@
+/* =============================================
+   RESPONSIVE: LAPTOP (1024px - 1200px)
+   ============================================= */
+@media (max-width: 1200px) {
+  .container { max-width: 960px; }
+  .hero-image-ring { width: 280px; height: 280px; }
+  .hero-image-glow { width: 340px; height: 340px; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* =============================================
+   RESPONSIVE: TABLET (768px - 1024px)
+   ============================================= */
+@media (max-width: 1024px) {
+  .container { max-width: 720px; }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .hero-text { order: 2; align-items: center; }
+  .hero-image-wrapper { order: 1; }
+  .hero-image-ring { width: 220px; height: 220px; }
+  .hero-image-glow { width: 280px; height: 280px; }
+  .hero-buttons { justify-content: center; }
+  .hero-socials { justify-content: center; }
+  .hero-name { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+  .hero-tagline { display: none; }
+  
+  .about-content { grid-template-columns: 1fr; gap: 40px; }
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
+  
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .projects-filter { flex-direction: column; align-items: stretch; }
+  .projects-search { max-width: 100%; }
+  
+  .certificates-grid { grid-template-columns: repeat(2, 1fr); }
+  
+  .resume-content { grid-template-columns: 1fr; }
+  
+  .contact-content { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* =============================================
+   RESPONSIVE: MOBILE LARGE (480px - 768px)
+   ============================================= */
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+  
+  .section { padding: 80px 0; }
+  .section-header { margin-bottom: 40px; }
+  
+  /* Navigation */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(3, 7, 18, 0.95);
+    backdrop-filter: blur(20px);
+    border-left: 1px solid var(--border-glass);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 24px;
+    z-index: 998;
+  }
+  
+  .nav-links.active { right: 0; }
+  
+  .nav-link { font-size: 1.1rem; }
+  
+  .nav-hamburger { display: flex; }
+  
+  /* Hero */
+  .hero-image-ring { width: 180px; height: 180px; }
+  .hero-image-glow { width: 240px; height: 240px; }
+  .hero-name { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+  .hero-greeting { font-size: 0.9rem; }
+  .hero-buttons { flex-direction: column; width: 100%; }
+  .hero-buttons .btn { width: 100%; justify-content: center; }
+  
+  /* About */
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
+  
+  /* Skills */
+  .skills-grid { grid-template-columns: 1fr; }
+  
+  /* Projects */
+  .projects-grid { grid-template-columns: 1fr; }
+  .filter-buttons { justify-content: center; }
+  
+  /* Certificates */
+  .certificates-grid { grid-template-columns: 1fr; }
+  
+  /* Resume */
+  .resume-actions { flex-direction: column; }
+  .resume-actions .btn { width: 100%; justify-content: center; }
+  
+  /* Contact */
+  .contact-content { grid-template-columns: 1fr; }
+  
+  /* Footer */
+  .footer-links { gap: 16px; }
+  .footer-socials { gap: 12px; }
+  
+  /* Stats */
+  .github-stats { gap: 24px; }
+  .github-stat-num { font-size: 1.4rem; }
+  
+  /* Back to top */
+  .back-to-top { bottom: 20px; right: 20px; width: 44px; height: 44px; font-size: 1.1rem; }
+}
+
+/* =============================================
+   RESPONSIVE: MOBILE SMALL (< 480px)
+   ============================================= */
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .section { padding: 60px 0; }
+  
+  .hero-image-ring { width: 150px; height: 150px; }
+  .hero-image-glow { width: 200px; height: 200px; }
+  .hero-name { font-size: clamp(1.5rem, 7vw, 2rem); }
+  .hero-typing { font-size: 0.9rem; }
+  
+  .about-stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .stat-item { padding: 14px 8px; }
+  .stat-number { font-size: 1.5rem; }
+  
+  .skill-card { padding: 24px; }
+  
+  .cert-card { padding: 24px; }
+  
+  .modal-content { width: 95%; }
+  .modal-nav { width: 36px; height: 36px; font-size: 0.9rem; }
+  .modal-nav.modal-prev { left: 8px; }
+  .modal-nav.modal-next { right: 8px; }
+  
+  .resume-card { padding: 20px; }
+  
+  .contact-item { padding: 14px; }
+  .contact-icon { width: 40px; height: 40px; min-width: 40px; font-size: 1rem; }
+  
+  .loader-initials { font-size: 3.5rem; }
+  .loader-bar-track { width: 220px; }
+  
+  .github-card { padding: 20px; }
+  .github-grid { grid-template-columns: repeat(auto-fill, minmax(10px, 1fr)); gap: 2px; }
+}
+
+/* =============================================
+   MOBILE NAV OVERLAY
+   ============================================= */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 7, 18, 0.5);
+  z-index: 997;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition);
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =============================================
+   LANDSCAPE MODE FIXES
+   ============================================= */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: 120px 0 60px;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .hero-image-ring { width: 130px; height: 130px; }
+  .hero-image-glow { width: 170px; height: 170px; }
+  .hero-name { font-size: 1.6rem; }
+  
+  .nav-links {
+    padding: 60px 40px;
+    gap: 16px;
+  }
+}
+
+/* =============================================
+   PRINT STYLES
+   ============================================= */
+@media print {
+  .cursor-outer, .cursor-inner, .cursor-trail,
+  .loader, .back-to-top, .scroll-progress, .header,
+  .hero-particles, .hero-float-code, .hero-bg-circles,
+  .particle-canvas { display: none !important; }
+  
+  body { cursor: default; color: #000; background: #fff; }
+  .section { padding: 40px 0; }
+  .glass-card { background: #f5f5f5; border: 1px solid #ddd; box-shadow: none; }
+  .gradient-text { -webkit-text-fill-color: #000; color: #000; }
+}
