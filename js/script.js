@@ -578,16 +578,6 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   /* =============================================
-     VISITOR COUNTER
-     ============================================= */
-  (function initVisitorCounter() {
-    const counter = document.createElement('div');
-    counter.className = 'visitor-counter';
-    counter.innerHTML = '<i class="fas fa-eye"></i> <span>Visitors: ' + (Math.floor(Math.random() * 900) + 100) + '</span>';
-    document.body.appendChild(counter);
-  })();
-
-  /* =============================================
      DOWNLOAD RESUME
      ============================================= */
   (function initResumeDownload() {

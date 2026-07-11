@@ -16,13 +16,10 @@
   <title>Projects | Hemasri Arul</title>
 </head>
 <body>
+
   <div class="cursor-outer" id="cursorOuter"></div>
   <div class="cursor-inner" id="cursorInner"></div>
   <canvas id="cursorTrail" class="cursor-trail"></canvas>
-
-  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Scroll progress">
-    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
-  </div>
 
   <header class="header" id="header" role="banner">
     <nav class="nav container" role="navigation" aria-label="Main navigation">
@@ -127,8 +124,37 @@
             </div>
           </div>
         </div>
-        
-  
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C300,100 700,0 1200,60 L1200,120 L0,120 Z" class="wave-path"></path>
+      </svg>
+    </div>
+    <div class="container footer-content">
+      <div class="footer-socials">
+        <a href="https://github.com/arulhemasri21-code" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hemasri-a-61a139381" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:arulhemasri21@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-copy">
+        &copy; <span id="footerYear">2024</span> Hemasri Arul. Crafted with <i class="fas fa-heart" style="color: #ff6b6b;"></i>
+      </p>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-rocket"></i>
+    </button>
+  </footer>
 
   <script src="js/particles.js"></script>
   <script src="js/cursor.js"></script>
