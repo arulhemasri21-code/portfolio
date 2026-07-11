@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Certificates of Hemasri Arul - Full Stack Developer & AI Enthusiast">
+  <meta name="author" content="Hemasri Arul">
+  <meta name="theme-color" content="#00F5FF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <title>Certificates | Hemasri Arul</title>
+</head>
+<body>
+  <div class="cursor-outer" id="cursorOuter"></div>
+  <div class="cursor-inner" id="cursorInner"></div>
+  <canvas id="cursorTrail" class="cursor-trail"></canvas>
+
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Scroll progress">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <header class="header" id="header" role="banner">
+    <nav class="nav container" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Home">HA</a>
+      <div class="nav-links" id="navLinks">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="certificates.html" class="nav-link active">Certificates</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section id="certificates" class="certificates section" aria-label="Certificates">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Credentials</span>
+        <h2 class="section-title">My <span class="gradient-text">Certificates</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="certificates-grid" id="certificatesGrid">
+        <div class="cert-card glass-card reveal" data-cert="aws">
+          <div class="cert-icon"><i class="fab fa-aws"></i></div>
+          <h3 class="cert-title">AWS Cloud Foundations</h3>
+          <p class="cert-org">Amazon Web Services</p>
+          <button class="cert-view" data-cert="aws">View Certificate</button>
+        </div>
+        <div class="cert-card glass-card reveal" data-cert="ibm">
+          <div class="cert-icon"><i class="fas fa-brain"></i></div>
+          <h3 class="cert-title">IBM AI Certification</h3>
+          <p class="cert-org">IBM</p>
+          <button class="cert-view" data-cert="ibm">View Certificate</button>
+        </div>
+        <div class="cert-card glass-card reveal" data-cert="cyber">
+          <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3 class="cert-title">Cybersecurity</h3>
+          <p class="cert-org">Industry Certification</p>
+          <button class="cert-view" data-cert="cyber">View Certificate</button>
+        </div>
+        <div class="cert-card glass-card reveal" data-cert="data-science">
+          <div class="cert-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3 class="cert-title">Python Data Science</h3>
+          <p class="cert-org">Data Science Certification</p>
+          <button class="cert-view" data-cert="data-science">View Certificate</button>
+        </div>
+        <div class="cert-card glass-card reveal" data-cert="intel">
+          <div class="cert-icon"><i class="fas fa-microchip"></i></div>
+          <h3 class="cert-title">Intel AI Sashakt</h3>
+          <p class="cert-org">Intel</p>
+          <button class="cert-view" data-cert="intel">View Certificate</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="certModal" role="dialog" aria-modal="true" aria-label="Certificate viewer">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+      <button class="modal-nav modal-prev" id="modalPrev" aria-label="Previous certificate"><i class="fas fa-chevron-left"></i></button>
+      <button class="modal-nav modal-next" id="modalNext" aria-label="Next certificate"><i class="fas fa-chevron-right"></i></button>
+      <div class="modal-image-wrapper">
+        <img id="modalCertImage" class="modal-cert-image" src="" alt="Certificate">
+        <div class="modal-image-placeholder" id="modalPlaceholder">
+          <i class="fas fa-award"></i>
+          <h3 id="modalCertTitle">Certificate Title</h3>
+          <p id="modalCertOrg">Organization</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C300,100 700,0 1200,60 L1200,120 L0,120 Z" class="wave-path"></path>
+      </svg>
+    </div>
+    <div class="container footer-content">
+      <div class="footer-socials">
+        <a href="https://github.com/arulhemasri21-code" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hemasri-a-61a139381" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:arulhemasri21@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-copy">
+        &copy; <span id="footerYear">2024</span> Hemasri Arul. Crafted with <i class="fas fa-heart" style="color: #ff6b6b;"></i>
+      </p>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-rocket"></i>
+    </button>
+  </footer>
+
+  <script src="js/particles.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

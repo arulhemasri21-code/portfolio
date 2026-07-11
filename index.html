@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hemasri Arul - Full Stack Developer & AI Enthusiast. Premium portfolio showcasing projects, skills, and achievements.">
+  <meta name="keywords" content="Hemasri Arul, Full Stack Developer, Portfolio, Web Developer, Data Analyst, AI">
+  <meta name="author" content="Hemasri Arul">
+  <meta property="og:title" content="Hemasri Arul | Portfolio">
+  <meta property="og:description" content="Full Stack Developer & AI Enthusiast">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#00F5FF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <title>Hemasri Arul | Full Stack Developer</title>
+</head>
+<body>
+
+  <div id="loader" class="loader" role="status" aria-label="Loading">
+    <div class="loader-inner">
+      <div class="loader-initials">HA</div>
+      <div class="loader-bar-track">
+        <div class="loader-bar" id="loaderBar"></div>
+      </div>
+      <p class="loader-text">Loading Portfolio...</p>
+    </div>
+  </div>
+
+  <div class="cursor-outer" id="cursorOuter"></div>
+  <div class="cursor-inner" id="cursorInner"></div>
+  <canvas id="cursorTrail" class="cursor-trail"></canvas>
+
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Scroll progress">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <header class="header" id="header" role="banner">
+    <nav class="nav container" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Home">HA</a>
+      <div class="nav-links" id="navLinks">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="certificates.html" class="nav-link">Certificates</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero section" aria-label="Home">
+    <canvas id="particleCanvas" class="hero-particles"></canvas>
+    <div class="hero-bg-circles">
+      <div class="hero-circle hero-circle-1"></div>
+      <div class="hero-circle hero-circle-2"></div>
+      <div class="hero-circle hero-circle-3"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">HEMASRI ARUL</h1>
+        <div class="hero-typing">
+          <span class="hero-typing-static">I'm a </span>
+          <span class="hero-typing-dynamic" id="typingText">Full Stack Developer</span>
+          <span class="hero-typing-cursor">|</span>
+        </div>
+        <p class="hero-tagline">Full Stack Developer | Backend Developer | Data Analyst | AI Enthusiast</p>
+        <div class="hero-buttons">
+          <a href="resume/Hemasri_Arul_Resume.pdf" class="btn btn-primary" id="downloadResume" download><i class="fas fa-download"></i> Download Resume</a>
+          <a href="projects.html" class="btn btn-outline"><i class="fas fa-code"></i> View Projects</a>
+          <a href="certificates.html" class="btn btn-outline"><i class="fas fa-award"></i> My Certificates</a>
+          <a href="contact.html" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Me</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/arulhemasri21-code" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/hemasri-a-61a139381" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:arulhemasri21@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <div class="hero-image-glow"></div>
+        <div class="hero-image-ring">
+          <div class="hero-image-ring-inner">
+            <img src="images/profile.jpg" alt="Hemasri Arul" class="hero-image" id="heroImage" onerror="this.style.display='none'; document.querySelector('.hero-image-ring').classList.add('no-image')">
+            <div class="hero-image-placeholder">
+              <span>HA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-float-code">
+      <pre>&lt;developer&gt;<span class="code-cyan">Hemasri</span>&lt;/developer&gt;</pre>
+      <pre>const <span class="code-purple">future</span> = <span class="code-yellow">await</span> <span class="code-cyan">build</span>()</pre>
+      <pre>console.<span class="code-yellow">log</span>(<span class="code-green">"Hello World!"</span>)</pre>
+      <pre><span class="code-purple">class</span> <span class="code-cyan">Innovator</span> {}</pre>
+      <pre>npm run <span class="code-yellow">deploy</span></pre>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C300,100 700,0 1200,60 L1200,120 L0,120 Z" class="wave-path"></path>
+      </svg>
+    </div>
+    <div class="container footer-content">
+      <div class="footer-socials">
+        <a href="https://github.com/arulhemasri21-code" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hemasri-a-61a139381" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:arulhemasri21@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-copy">
+        &copy; <span id="footerYear">2024</span> Hemasri Arul. Crafted with <i class="fas fa-heart" style="color: #ff6b6b;"></i>
+      </p>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-rocket"></i>
+    </button>
+  </footer>
+
+  <script src="js/particles.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
