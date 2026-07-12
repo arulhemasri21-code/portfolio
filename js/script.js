@@ -238,19 +238,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!toggle || !icon) return;
 
     const html = document.documentElement;
-    const saved = localStorage.getItem('portfolio-theme');
 
-    if (saved) {
-      html.setAttribute('data-theme', saved);
-      icon.className = saved === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-    }
+    html.setAttribute('data-theme', 'dark');
+    icon.className = 'fas fa-moon';
 
     toggle.addEventListener('click', () => {
       const current = html.getAttribute('data-theme');
       const next = current === 'dark' ? 'light' : 'dark';
       html.setAttribute('data-theme', next);
       icon.className = next === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-      localStorage.setItem('portfolio-theme', next);
     });
   })();
 
@@ -440,24 +436,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (valid) {
-        const btn = document.getElementById('formSubmit');
-        if (btn) {
-          const orig = btn.innerHTML;
-          btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-          btn.disabled = true;
-
-          setTimeout(() => {
-            btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-            btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-
-            setTimeout(() => {
-              btn.innerHTML = orig;
-              btn.disabled = false;
-              btn.style.background = '';
-              form.reset();
-            }, 3000);
-          }, 1500);
-        }
+        const name = document.getElementById('formName').value.trim();
+        const email = document.getElementById('formEmail').value.trim();
+        const subject = document.getElementById('formSubject').value.trim();
+        const message = document.getElementById('formMessage').value.trim();
+        const mailtoLink = `mailto:arulhemasri21@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+        window.location.href = mailtoLink;
+        form.reset();
       }
     });
   })();

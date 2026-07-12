@@ -1524,6 +1524,9 @@ input, textarea {
   gap: 16px;
   padding: 20px;
   background: var(--bg-card);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-glass);
   transition: all var(--transition);
